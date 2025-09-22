@@ -1,0 +1,296 @@
+/* ManageAppointments.css */
+.manage-appointments-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* رأس الصفحة */
+.page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-text h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.header-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 150px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* التبويبات */
+.tabs-container {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.custom-tablist {
+  display: flex;
+  gap: 5px;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 0;
+  margin: 0 0 30px 0;
+  list-style: none;
+}
+
+.custom-tab {
+  padding: 15px 25px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-weight: 600;
+  color: #718096;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px 10px 0 0;
+}
+
+.custom-tab:hover {
+  color: #667eea;
+  background: #f7fafc;
+}
+
+.react-tabs__tab--selected {
+  color: #667eea;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+.tab-label {
+  font-size: 1rem;
+}
+
+.tab-panel {
+  padding: 20px 0;
+}
+
+.panel-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.panel-header h2 {
+  color: #2d3748;
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.panel-header p {
+  color: #718096;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* النظرة السريعة */
+.quick-overview {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quick-overview h3 {
+  color: #2d3748;
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.overview-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #f7fafc;
+  border-radius: 15px;
+  border-left: 4px solid;
+  transition: transform 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-3px);
+}
+
+.overview-card:nth-child(1) {
+  border-left-color: #48bb78;
+}
+
+.overview-card:nth-child(2) {
+  border-left-color: #ed8936;
+}
+
+.overview-card:nth-child(3) {
+  border-left-color: #f56565;
+}
+
+.overview-icon {
+  font-size: 2rem;
+}
+
+.overview-card h4 {
+  margin: 0 0 5px 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.overview-card p {
+  margin: 0;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .manage-appointments-page {
+    padding: 15px;
+  }
+
+  .page-header {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stat-card {
+    min-width: 120px;
+    padding: 12px 15px;
+  }
+
+  .custom-tablist {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .custom-tab {
+    border-radius: 10px;
+    justify-content: center;
+  }
+
+  .tab-indicator {
+    display: none;
+  }
+
+  .overview-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+
+  .stat-card {
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .tab-label {
+    font-size: 0.9rem;
+  }
+}

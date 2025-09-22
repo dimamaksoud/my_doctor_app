@@ -1,0 +1,40 @@
+.date-picker-container {
+  margin-bottom: 20px;
+}
+
+.date-picker-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.date-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* تخصيص مظهر date picker في المتصفحات المختلفة */
+.date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.date-input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.date-input::-webkit-clear-button {
+  font-size: 18px;
+}
